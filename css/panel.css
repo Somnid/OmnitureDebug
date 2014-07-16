@@ -1,15 +1,29 @@
 body {
   font-family: arial;
+  padding : 0px;
+  margin: 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 ul, li { padding: 0px; }
 li { 
   list-style : none;
   border: 1px solid black;
+  border-bottom: none;
   background: #efefef;
-  padding: 8px;
+  padding: 3px;
   box-sizing: border-box;
+  font-size: 11px;
+}
+li:last-child {
+  border-bottom: 1px solid black;
 }
 
 li.custom{
   background: #003300;
+}
+#requests {
+  flex-grow : 1;
 }
