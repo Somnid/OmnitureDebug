@@ -1,0 +1,7 @@
+{ 
+  "name": "Omniture Debugger", 
+  "version": "1.0", 
+  "description": "Debugs Omniture", 
+  "manifest_version": 2,
+  "devtools_page" : "html/devtools.html"
+}

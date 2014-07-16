@@ -1,0 +1,15 @@
+body {
+  font-family: arial;
+}
+ul, li { padding: 0px; }
+li { 
+  list-style : none;
+  border: 1px solid black;
+  background: #efefef;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+li.custom{
+  background: #003300;
+}
