@@ -1,3 +1,6 @@
+html {
+  height: 100%;
+}
 body {
   font-family: arial;
   padding : 0px;
@@ -6,6 +9,7 @@ body {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: stretch;
+  height: 100%;
 }
 ul, li { padding: 0px; }
 li { 
@@ -26,4 +30,12 @@ li.custom{
 }
 #requests {
   flex-grow : 1;
+  margin : 0px;
+  overflow-y: scroll;
+}
+#menu {
+  background: #efefef;
+  border-bottom: 1px solid #cccccc;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
