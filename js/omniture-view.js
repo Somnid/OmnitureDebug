@@ -12,6 +12,7 @@ var OmnitureView = (function(){
       omnitureView.gatherSelectors = gatherSelectors.bind(omnitureView);
       omnitureView.attachEvents = attachEvents.bind(omnitureView);
       omnitureView.onRequestFinished = onRequestFinished.bind(omnitureView);
+      omnitureView.onNavigated = onNavigated.bind(omnitureView);
       omnitureView.print = print.bind(omnitureView);
     }
     
@@ -32,9 +33,14 @@ var OmnitureView = (function(){
         ul.scrollIntoView(true); 
       } 
     } 
-      
+    
+    function onNavigated(){
+      clear();
+    }
+    
     function attachEvents(){ 
       chrome.devtools.network.onRequestFinished.addListener(this.onRequestFinished);
+      chrome.devtools.network.onNavigated.addListener(this.onNavigated);
       this.dom.clearButton.addEventListener("click", clear.bind(this, this.dom.requests));
     } 
       
